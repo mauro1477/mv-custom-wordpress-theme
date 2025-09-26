@@ -1,0 +1,21 @@
+# WordPress core files not tracked in this repository
+wp-admin/
+wp-includes/
+
+# Uploads and cache directories
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+.idea/
+.vscode/
+
+# Local environment configuration
+wp-config-local.php
+.env

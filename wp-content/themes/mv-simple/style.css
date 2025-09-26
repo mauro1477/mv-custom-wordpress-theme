@@ -1,0 +1,192 @@
+/*
+Theme Name: MV Simple Theme
+Theme URI: https://example.com/mv-simple
+Author: MV Themes
+Author URI: https://example.com
+Description: A lightweight theme used for demonstration inside the kata.
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: mv-simple
+*/
+
+:root {
+    --mv-primary: #1f4f8b;
+    --mv-secondary: #f0f4f8;
+    --mv-accent: #fcbf49;
+    --mv-text: #1c1c1c;
+    --mv-muted: #6c757d;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: var(--mv-text);
+    background-color: #ffffff;
+    margin: 0;
+}
+
+a {
+    color: var(--mv-primary);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+.site {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.site-header {
+    background: linear-gradient(135deg, var(--mv-primary), #0f2f54);
+    color: #ffffff;
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+}
+
+.site-description {
+    margin: 0.5rem 0 0;
+    font-weight: 300;
+}
+
+.site-navigation {
+    background-color: #0f2f54;
+}
+
+.site-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.site-navigation li {
+    margin: 0.25rem 0.75rem;
+}
+
+.site-navigation a {
+    color: #ffffff;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+.hero {
+    background-color: var(--mv-secondary);
+    padding: 4rem 1.5rem;
+    text-align: center;
+}
+
+.hero__title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+    max-width: 60ch;
+    margin: 0 auto 2rem;
+    color: var(--mv-muted);
+}
+
+.hero__cta {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: var(--mv-accent);
+    color: #0f2f54;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero__cta:hover,
+.hero__cta:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(252, 191, 73, 0.35);
+}
+
+.content-area {
+    flex: 1;
+    width: min(1100px, 92vw);
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.post-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 15px 35px rgba(15, 47, 84, 0.07);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover,
+.post-card:focus-within {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px rgba(15, 47, 84, 0.12);
+}
+
+.post-card__meta {
+    display: flex;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--mv-muted);
+}
+
+.post-card__title {
+    font-size: 1.75rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.post-card__excerpt {
+    line-height: 1.6;
+    color: var(--mv-muted);
+}
+
+.widget-area {
+    background-color: var(--mv-secondary);
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+}
+
+.site-footer {
+    background-color: #0f2f54;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: auto;
+}
+
+.site-footer p {
+    margin: 0.25rem 0;
+    font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+    .site-navigation ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .post-card {
+        padding: 1.5rem;
+    }
+}
